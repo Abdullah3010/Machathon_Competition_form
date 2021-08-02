@@ -1,0 +1,28 @@
+CREATE TABLE leader(
+    name TEXT,
+    number INTEGER PRIMARY KEY,
+    email TEXT,
+    nmember INTEGER,
+    uni TEXT,
+    faculty TEXT,
+    department 	TEXT,
+    grad INTEGER
+);
+CREATE TABLE members(
+    name TEXT,
+    number INTEGER PRIMARY KEY,
+    email TEXT,
+   
+    uni TEXT,
+    faculty TEXT,
+    department 	TEXT,
+    grad INTEGER,
+    nleader INTEGER
+);
+CREATE TABLE ourteam(
+    name TEXT ,
+    nleader INTEGER,
+    tel INTEGER
+    
+);
+SELECT ourteam.name, members.name , leader.name FROM ourteam JOIN members JOIN leader ON ourteam.tel=members.number AND ourteam.nleader=leader.number

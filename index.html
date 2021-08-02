@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--   meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Team Leaders' Registration</title>
+    <link rel="icon" href="assests/stp_logo.png">
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+<script type="text/javascript"> 
+    function preventBack() { 
+        window.history.forward();  
+    } 
+      
+    setTimeout("preventBack()", 0); 
+      
+    window.onunload = function () { null }; 
+  </script> 
+<body>
+    <div id="page-wrapper" class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div id="cardbody" class="card-body login-box">
+                    <a href="#nn"><img id="logo-header" src="assests/stp_logo.png" style="display: none;"></a>
+                    <form method="POST" action="php/form.php" id="form" style="display: none;">
+                        <a class="title">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Team Leaders' Registration Form</a>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group" id="nn">
+                                    <label class="label">Name</label>
+                                    <input class="input--style-4" type="text" name="name" id="name">
+                                    <small id="error-name"></small>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Phone Number</label>
+                                    <input class="input--style-4" type="tel" name="tel" placeholder="01XXXXXXXXX" id="phone">
+                                    <small id="error-phone"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">E-mail</label>
+                                    <input class="input--style-4" type="text" id="email" name="email"  >
+                                    <small id="error-email"></small>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Expected number of members</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="expected" id="numberOfTeam" >
+                                            <option disabled="disabled" selected="selected" value="">Choose option
+                                            </option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+
+                                        </select>
+                                        <small id="error-numberOfTeam"></small>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label">University</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="uni" id="university">
+                                    <option disabled="disabled" selected="selected" value="">Choose option</option>
+                                    <option value="Ain Shams University">Ain Shams University</option>
+                                    <option value="Al-Azhar University">Al-Azhar University</option>
+                                    <option value="Al-Matarya University">Al-Matarya University</option>
+                                    <option value="Helwan University">Helwan University</option>
+                                    <option value="Banha University">Banha University</option>
+                                    <option value="Other">Other..</option>
+                                </select>
+
+                                <input class="input--style-4 other-input" type="text" id="otherUniversity" name="other-uni" placeholder="Enter your university.." style="display: none;">
+                                <small id="error-university"></small>
+                                
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="label">Faculty</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="faculty"   id="faculty">
+                                    <option disabled="disabled" selected="selected" value="">Choose option</option>
+                                    <option value="Agriculture">Faculty of Agriculture</option>
+                                    <option value="Alsun">Faculty of Alsun</option>
+                                    <option value="Archaeology">Faculty of Archaeology</option>
+                                    <option value="Arts">Faculty of Arts</option>
+                                    <option value="Commerce">Faculty of Commerce</option>
+                                    <option value="Computers and Information System">Faculty of Computers and
+                                        Information System</option>
+                                    <option value="Dar El-Ulum">Faculty of Dar El-Ulum</option>
+                                    <option value="Economics and Political Science">Faculty of Economics and Political
+                                        Science</option>
+                                    <option value="Kindergarten">Faculty of Kindergarten</option>
+                                    <option value="Law">Faculty of Law</option>
+                                    <option value="Mass Communication">Faculty of Mass Communication</option>
+                                    <option value="Medicine">Faculty of Medicine</option>
+                                    <option value="Nursing">Faculty of Nursing</option>
+                                    <option value="Oral and Dental Medicine">Faculty of Oral and Dental Medicine
+                                    </option>
+                                    <option value="Pharmacology">Faculty of Pharmacology</option>
+                                    <option value="Physiotherapy">Faculty of Physiotherapy</option>
+                                    <option value="Science">Faculty of Science</option>
+                                    <option value="Specialized Education">Faculty of Specialized Education</option>
+                                    <option value="Veterinary Medicine">Faculty of Veterinary Medicine</option>
+                                    <option value="Other">Other..</option>
+                                    
+                                </select>
+
+                                <input class="input--style-4 other-input" id="otherFaculty" type="text" name="other-fac" placeholder="Enter your faculty.." style="display: none;">
+                                <small id="error-faculty"></small>
+
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Department</label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="department" id="department">
+                                                <option disabled="disabled" selected="selected" value="">Choose option
+                                                </option>
+                                                <option value="no-department">No Department</option>
+                                                <option value="undeclared">Undeclared</option>
+                                                <option value="Other">Enter Your Department..</option>
+                                            </select>
+                                            <input class="input--style-4 other-input" id="other-department" type="text" name="other-dep" placeholder="Enter your department here.." style="display: none;">
+                                            <small id="error-department"></small>
+                                            
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Graduation Year</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="grad"  id="grad">
+                                            <option disabled="disabled" selected="selected" value="">Choose option
+                                            </option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                        </select>
+                                        <small id="error-grad"></small>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label">CV</label>
+                            <input type="file" name="cv" id="cv">
+                            <input type="button" class="clickCV" value="Choose CV" id="clickCV" title="CV" onclick="document.getElementById('cv').click()">
+                            <small id="error-cv"></small>
+                        </div>
+
+                        <div class="p-t-15">
+                            <input type="submit" id="submit-button-b" name="submit" data-rel="back" style="display: none;">
+
+                            <a id="submit-button-a">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Submit
+                            </a>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+    <script type="text/javascript" src="js/leader.js"></script>
+    <script type="text/javascript" src="js/animation.js"></script>
+</body>
+</html>
